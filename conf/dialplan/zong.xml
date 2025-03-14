@@ -1,0 +1,11 @@
+
+<include>
+  <context name="zong">
+   <extension name="incoming">
+      <condition field="destination_number" expression="^(\d{6,20})$">
+        <action application="answer" data="" />
+        <action application="park" data="" />
+      </condition>
+    </extension>    
+  </context>
+</include>
