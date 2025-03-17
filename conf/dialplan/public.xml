@@ -22,9 +22,14 @@
 
 
    <extension name="incoming">
-      <condition field="destination_number" expression="^(\d{6,20})$">
-        <action application="answer" data="" />
-        <action application="echo" data="" />
+      <condition field="destination_number" expression="^zong(\d{2,20})$">
+        <action application="export" data="hangup_after_bridge=true" />
+        <action application="export" data="park_after_bridge=false" />
+        <action application="export" data="continue_on_fail=false" />
+        <action application="export" data="origination_caller_id_name=${caller_id_number}" />
+        <action application="export" data="origination_caller_id_number=${caller_id_number}" />
+        <action application="export" data="effective_caller_id_number=${caller_id_number}" />
+        <action application="bridge" data="sofia/zong/$1@10.66.200.214:5060" />
       </condition>
   </extension>
 
