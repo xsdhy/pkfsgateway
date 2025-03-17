@@ -12,11 +12,22 @@
 <!-- http://wiki.freeswitch.org/wiki/Dialplan_XML -->
 <include>
   <context name="public">
+
+  <extension name="echo">
+      <condition field="destination_number" expression="1234">
+        <action application="answer" data="" />
+        <action application="echo" data="" />
+      </condition>
+  </extension>
+
+
    <extension name="incoming">
       <condition field="destination_number" expression="^(\d{6,20})$">
         <action application="answer" data="" />
-        <action application="park" data="" />
+        <action application="echo" data="" />
       </condition>
-    </extension>    
+  </extension>
+
+
   </context>
 </include>
