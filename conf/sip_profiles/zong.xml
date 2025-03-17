@@ -3,10 +3,6 @@
   <!-- This profile is only for outbound registrations to providers -->
 
 
-  <aliases>
-    <alias name="zong"/>
-  </aliases>
-
   <domains>
     <domain name="all" alias="false" parse="true"/>
   </domains>
