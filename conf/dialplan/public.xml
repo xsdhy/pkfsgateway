@@ -22,14 +22,14 @@
 
 
    <extension name="incoming">
-      <condition field="destination_number" expression="^zong(\d{2,20})$">
+      <condition field="destination_number" expression="^zong92(\d{2,20})$">
         <action application="export" data="hangup_after_bridge=true" />
         <action application="export" data="park_after_bridge=false" />
         <action application="export" data="continue_on_fail=false" />
         <action application="export" data="origination_caller_id_name=${caller_id_number}" />
         <action application="export" data="origination_caller_id_number=${caller_id_number}" />
         <action application="export" data="effective_caller_id_number=${caller_id_number}" />
-        <action application="bridge" data="sofia/zong/$1@10.66.194.136:5060" />
+        <action application="bridge" data="sofia/zong/0$1@10.66.194.136:5060" />
       </condition>
   </extension>
 
