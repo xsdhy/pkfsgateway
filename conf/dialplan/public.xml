@@ -29,7 +29,7 @@
         <action application="export" data="origination_caller_id_name=${caller_id_number}" />
         <action application="export" data="origination_caller_id_number=${caller_id_number}" />
         <action application="export" data="effective_caller_id_number=${caller_id_number}" />
-        <action application="bridge" data="sofia/zong/0$1@10.66.194.136:5060" />
+        <action application="bridge" data="sofia/zong/$1@10.66.194.136:5060" />
       </condition>
   </extension>
 
