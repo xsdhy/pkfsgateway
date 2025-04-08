@@ -14,8 +14,7 @@
   <context name="default">
     <extension name="test_incoming2">
       <condition field="destination_number" expression="^(\d{6,20})$">
-        <action application="answer" data="" />
-        <action application="park" data="" />
+        <action application="hangup" data="" />
       </condition>
     </extension>
   </context>
