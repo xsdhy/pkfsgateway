@@ -4,6 +4,7 @@ services:
     image: 'xsdhy/freeswitch:1.10.12'
     container_name: freeswitch
     network_mode: host
+    restart: always
     volumes:
       - "/etc/localtime:/etc/localtime"
       - "./conf:/usr/local/freeswitch/conf"
