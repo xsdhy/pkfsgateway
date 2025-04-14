@@ -1,0 +1,16 @@
+<include>
+    <context name="naytal">
+        <extension name="echo">
+            <condition field="destination_number" expression="1234">
+                <action application="answer" data="" />
+                <action application="echo" data="" />
+            </condition>
+        </extension>
+
+        <extension name="incoming">
+            <condition field="destination_number" expression="^(\d{6,20})$">
+                <action application="hangup" data="" />
+            </condition>
+        </extension>
+    </context>
+</include>  

@@ -1,18 +1,16 @@
-
 <include>
   <context name="zong">
-
     <extension name="echo">
       <condition field="destination_number" expression="1234">
         <action application="answer" data="" />
         <action application="echo" data="" />
       </condition>
-  </extension>
+    </extension>
 
-   <extension name="incoming">
+    <extension name="incoming">
       <condition field="destination_number" expression="^(\d{6,20})$">
         <action application="hangup" data="" />
       </condition>
-    </extension>    
+    </extension>
   </context>
 </include>

@@ -21,7 +21,7 @@
   </extension>
 
 
-   <extension name="incoming">
+   <extension name="calloutzong">
       <condition field="destination_number" expression="^zong92(\d{2,20})$">
         <action application="export" data="hangup_after_bridge=true" />
         <action application="export" data="park_after_bridge=false" />
@@ -31,6 +31,19 @@
         <action application="export" data="effective_caller_id_number=${caller_id_number}" />
         <action application="bridge" data="sofia/zong/$1@10.66.194.136:5060" />
       </condition>
+  </extension>
+
+
+  <extension name="calloutnaytal">
+    <condition field="destination_number" expression="^naytal92(\d{2,20})$">
+      <action application="export" data="hangup_after_bridge=true" />
+      <action application="export" data="park_after_bridge=false" />
+      <action application="export" data="continue_on_fail=false" />
+      <action application="export" data="origination_caller_id_name=${caller_id_number}" />
+      <action application="export" data="origination_caller_id_number=${caller_id_number}" />
+      <action application="export" data="effective_caller_id_number=${caller_id_number}" />
+      <action application="bridge" data="sofia/naytal/$1@10.50.161.163:5060" />
+    </condition>
   </extension>
 
 
